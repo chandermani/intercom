@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intercom.Invite", "Intercom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intercom.Invite.Tests", "Intercom.Invite.Tests\Intercom.Invite.Tests.csproj", "{37854C17-36A7-4E64-8BFF-8E42F10FD0E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intercom.Invite.Core", "Intercom.Invite.Core\Intercom.Invite.Core.csproj", "{81003472-20D4-4C73-B483-1D09EEE580F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{37854C17-36A7-4E64-8BFF-8E42F10FD0E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37854C17-36A7-4E64-8BFF-8E42F10FD0E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37854C17-36A7-4E64-8BFF-8E42F10FD0E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81003472-20D4-4C73-B483-1D09EEE580F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81003472-20D4-4C73-B483-1D09EEE580F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81003472-20D4-4C73-B483-1D09EEE580F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81003472-20D4-4C73-B483-1D09EEE580F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
