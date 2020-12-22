@@ -14,7 +14,7 @@
 	`dotnet test`
 - Then Navigate to folder `Intercom.Invite` and run
 
-	`dotnet run ./customer.txt <outputfilePath>`
+	`dotnet run ./customers.txt <outputfilePath>`
 
 	This should generate the filter list of customers who are invited.
 
