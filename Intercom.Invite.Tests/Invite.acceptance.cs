@@ -60,12 +60,12 @@ namespace Intercom.Invite.Tests
            new List<object[]>
            {
                 new object[] { "./TestInputs/customers.txt",
-                                20,
+                                20,                     // 20 Km
                                 new GPSCoordinate(53.339428d, -6.257664),
                                 new List<int>() { 4 } },
 
                  new object[] { "./TestInputs/customers.txt",
-                                200,
+                                200,                // 200 Km
                                 new GPSCoordinate(52.339428d, -7.257664),
                                 new List<int>() { 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 18, 21, 25, 26, 28, 29, 30, 31, 39 } }
            };
