@@ -25,8 +25,8 @@ namespace Intercom.Invite
                 return;
             }
 
-            CustomerListFilter customerListFilter =
-                new CustomerListFilter(new CustomerListReader(inputFilePath, new CustomerModelBuilder()),
+            CustomerInviteFilter customerInviteFilter =
+                new CustomerInviteFilter(new CustomerListReader(inputFilePath, CustomerModelMapper.Default),
                                         DistanceCalculator.GreatCircleDistance);
 
             GPSCoordinate dublinCoordinates = new GPSCoordinate(53.339428, -6.257664);
@@ -34,7 +34,7 @@ namespace Intercom.Invite
 
             using (StreamWriter writer = new StreamWriter(File.OpenWrite(outputFilePath)))
             {
-                foreach(var customer in customerListFilter.Filter(dublinCoordinates, radius).OrderBy(c=>c.Id))
+                foreach(var customer in customerInviteFilter.Filter(dublinCoordinates, radius).OrderBy(c=>c.Id))
                 {
                     writer.WriteLine(JsonConvert.SerializeObject(new { user_id = customer.Id, name = customer.Name }));
                 }

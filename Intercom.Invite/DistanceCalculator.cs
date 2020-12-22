@@ -6,6 +6,7 @@ namespace Intercom.Invite
 {
     public class DistanceCalculator
     {
+        // TODO: This can be part of some configurations
         public const double MEAN_EARTH_RADIUS_KM = 6371.009d;
 
         public static Func<GPSCoordinate, GPSCoordinate, double> GreatCircleDistance = (location1, location2) =>

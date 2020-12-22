@@ -5,12 +5,12 @@ using System.Text;
 
 namespace Intercom.Invite
 {
-    public class CustomerListFilter
+    public class CustomerInviteFilter
     {
         private readonly ICustomerListReader customerListReader;
         private Func<GPSCoordinate, GPSCoordinate, double> distanceCalculator;
 
-        public CustomerListFilter(ICustomerListReader customerListReader, 
+        public CustomerInviteFilter(ICustomerListReader customerListReader, 
                                     Func<GPSCoordinate, GPSCoordinate, double> distanceCalculator)
         {
             this.customerListReader = customerListReader;

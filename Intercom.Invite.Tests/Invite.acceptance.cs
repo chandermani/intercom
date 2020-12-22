@@ -15,7 +15,7 @@ namespace Intercom.Invite.Tests
         {
             
             // Arrange
-            CustomerListFilter target = BuildTarget(inputFilePath);
+            CustomerInviteFilter target = BuildTarget(inputFilePath);
 
             // Act
             var result = target.Filter(source, 100);
@@ -31,7 +31,7 @@ namespace Intercom.Invite.Tests
         {
 
             // Arrange
-            CustomerListFilter target = BuildTarget(inputFilePath);
+            CustomerInviteFilter target = BuildTarget(inputFilePath);
 
             // Act
             var result = target.Filter(source, radius);
@@ -41,9 +41,9 @@ namespace Intercom.Invite.Tests
                 .Select(c => c.Id).ShouldBe(expectedInvitedCustomers);
         }
 
-        private CustomerListFilter BuildTarget(string customerListFilePath)
+        private CustomerInviteFilter BuildTarget(string customerListFilePath)
         {
-            return new CustomerListFilter(new CustomerListReader(customerListFilePath, new CustomerModelBuilder()),
+            return new CustomerInviteFilter(new CustomerListReader(customerListFilePath, CustomerModelMapper.Default),
                                           DistanceCalculator.GreatCircleDistance);
         }
 

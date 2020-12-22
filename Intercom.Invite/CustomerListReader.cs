@@ -9,12 +9,12 @@ namespace Intercom.Invite
     public class CustomerListReader : ICustomerListReader
     {
         private readonly string customerListFilePath;
-        private readonly ICustomerModelBuilder customerModelBuilder;
+        private readonly Func<string, Customer> mapper;
 
-        public CustomerListReader(string customerListFilePath, ICustomerModelBuilder customerModelBuilder)
+        public CustomerListReader(string customerListFilePath, Func<string,Customer> mapper)
         {
             this.customerListFilePath = customerListFilePath;
-            this.customerModelBuilder = customerModelBuilder;
+            this.mapper = mapper;
         }
 
         public IEnumerable<Customer> GetCustomers()
@@ -24,7 +24,7 @@ namespace Intercom.Invite
                 string customerLine = null;
                 while ((customerLine = sr.ReadLine()) != null)
                 {
-                    yield return this.customerModelBuilder.Build(customerLine);
+                    yield return mapper(customerLine);
                 }
             }
         }
